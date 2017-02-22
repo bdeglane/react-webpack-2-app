@@ -140,3 +140,5 @@ Temporary Items
 .apdisk
 
 dist/
+/src/static/
+!/src/static/index.html
