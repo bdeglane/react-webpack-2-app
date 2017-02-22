@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = process.env.NODE_ENV === 'development';
@@ -24,6 +25,13 @@ module.exports = {
                 test: /\.js[x]{0,1}$/,
                 exclude: /node_modules/,
                 use: [{loader: 'babel-loader'}]
+            },
+            {
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: "css-loader"
+                })
             }
         ]
     },
@@ -39,6 +47,11 @@ module.exports = {
         new webpack.optimize.UglifyJsPlugin({
             compress: isProd,
             sourceMap: isDev
+        }),
+        new ExtractTextPlugin({
+            filename: '../style/[name].css',
+            disable: false,
+            allChunks: true
         })
     ]
 };
