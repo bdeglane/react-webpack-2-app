@@ -5,7 +5,7 @@ const isProd = process.env.NODE_ENV === 'production';
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-    entry: path.resolve(path.join(__dirname, 'src', 'main.js')),
+    entry: path.resolve(path.join(__dirname, 'src', 'client.js')),
     output: {
         path: path.resolve(path.join(__dirname, 'dist')),
         filename: '[name].js'

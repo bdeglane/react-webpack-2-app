@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, {Component} from 'react';
 
-export default class App {
-  start() {
-    ReactDOM.render(
-      <div className="start"></div>,
-      document.getElementById('app')
-    )
-  }
+export default class App extends Component {
+    render() {
+        return (
+            <div className="start">
+                <h1>Hello {this.props.hello}!</h1>
+            </div>
+        )
+    }
 }
