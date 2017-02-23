@@ -27,11 +27,17 @@ module.exports = {
                 use: [{loader: 'babel-loader'}]
             },
             {
-                test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: "style-loader",
-                    use: ["css-loader", "sass-loader"]
-                })
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract([
+                    {
+                        loader: 'css-loader',
+                        // this must be `query`. if it is `option` the imported classNames are all `undefined`.
+                        query: {
+                            modules: true,
+                            localIdentName: '[hash:base64:5]'
+                        },
+                    },
+                ])
             }
         ]
     },

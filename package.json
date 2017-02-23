@@ -3,7 +3,6 @@
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "build:dev": "better-npm-run build:dev",
     "build:prod": "better-npm-run build:prod",
@@ -37,12 +36,19 @@
     "extract-text-webpack-plugin": "beta",
     "gulp": "^3.9.1",
     "gulp-webserver": "^0.9.1",
-    "node-sass": "^4.5.0",
     "precss": "^1.4.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "sass-loader": "^6.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "chai": "^3.5.0",
+    "css-modules-require-hook": "^4.0.5",
+    "enzyme": "^2.7.1",
+    "jsdom": "^9.11.0",
+    "mocha": "^3.2.0",
+    "react-addons-test-utils": "^15.4.2"
   }
 }
