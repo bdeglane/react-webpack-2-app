@@ -6,7 +6,7 @@
   "scripts": {
     "build:dev": "better-npm-run build:dev",
     "build:prod": "better-npm-run build:prod",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:component:all": "mocha --require ignore-styles test/bootstrap.js test/app/**/*.test.jsx --reporter dot"
   },
   "betterScripts": {
     "build:dev": {
