@@ -6,7 +6,7 @@ export default class App extends Component {
     render() {
         return (
             <div className={styles.app}>
-                <h1>Hello {this.props.hello}!</h1>
+                <h1 className={styles.title}>Hello {this.props.hello}!</h1>
             </div>
         )
     }

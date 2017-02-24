@@ -142,3 +142,4 @@ Temporary Items
 dist/
 /src/static/js/
 /src/static/style/
+*.old

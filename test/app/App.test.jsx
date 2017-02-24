@@ -4,7 +4,7 @@ import App from '../../src/app/App.jsx';
 import {assert} from 'chai';
 import {shallow} from 'enzyme';
 
-describe('<App hello="world">', () => {
+describe('<App hello="world"/>', () => {
     describe('valid rendered', () => {
         const props = 'test';
         const app = shallow(<App hello={props}/>);
