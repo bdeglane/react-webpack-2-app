@@ -2,6 +2,7 @@
 
 :root {
     --primary-color: #39afc2;
+    --heading-font: 'Playfair Display', serif;
 }
 
 html, body {
@@ -22,7 +23,7 @@ html, body * {
 }
 
 .titleFont {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--heading-font);
 }
 
 .primaryColor {
