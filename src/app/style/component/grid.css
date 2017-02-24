@@ -1,0 +1,54 @@
+.frame {
+    display: flex;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    order: 0;
+}
+
+.block {
+    display: flex;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    backface-visibility: hidden;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    order: 0;
+    overflow-y: auto;
+}
+
+.content {
+    display: block;
+    padding: 0 1rem;
+    overflow-y: auto;
+    flex: 1 1 auto;
+}
+
+.content .block {
+    margin-left: -1rem;
+    margin-right: -1rem;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+
+.shrink.block,
+.shrink.content {
+    flex: 0 0 auto;
+    overflow: visible;
+}
+
+.vertical.frame,
+.vertical.block {
+    flex-flow: column nowrap;
+    align-items: stretch;
+}
