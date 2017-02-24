@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const precess = require('precss');
 const cssimport = require('postcss-import');
 const cssnext = require('postcss-cssnext');
 
