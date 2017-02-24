@@ -1,0 +1,5 @@
+.header {
+    composes: block from '../../style/component/grid.css';
+    composes: primaryBgColor from '../../style/main.css';
+    height: 4rem;
+}
