@@ -1,8 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const cssimport = require('postcss-import');
-const cssnext = require('postcss-cssnext');
+const cssImport = require('postcss-import');
+const cssNext = require('postcss-cssnext');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = process.env.NODE_ENV === 'development';
@@ -48,9 +48,9 @@ module.exports = {
                         options: {
                             plugins: function () {
                                 return [
-                                    cssimport(),
+                                    cssImport(),
                                     // use css4
-                                    cssnext({
+                                    cssNext({
                                         browsers: ['last 2 versions', '> 5%']
                                     })
                                 ]
