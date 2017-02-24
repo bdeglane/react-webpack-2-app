@@ -31,6 +31,7 @@
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-2": "^6.22.0",
     "better-npm-run": "^0.0.14",
+    "classnames": "^2.2.5",
     "concurrently": "^3.2.0",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "beta",
