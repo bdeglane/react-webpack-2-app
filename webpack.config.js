@@ -5,6 +5,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = process.env.NODE_ENV === 'development';
 
+const cssLocalName = isDev ? '[path][name]__[local]' : '[hash:base64:5]';
+
 module.exports = {
     entry: path.resolve(path.join(__dirname, 'src', 'client.js')),
     output: {
@@ -34,9 +36,24 @@ module.exports = {
                         // this must be `query`. if it is `option` the imported classNames are all `undefined`.
                         query: {
                             modules: true,
-                            localIdentName: '[hash:base64:5]'
+                            sourceMap: isDev,
+                            minimize: isProd,
+                            localIdentName: cssLocalName
                         },
                     },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            // plugins: function () {
+                            //     return {
+                            //         'postcss-import': {},
+                            //         'postcss-cssnext': {
+                            //             browsers: ['last 2 versions', '> 5%'],
+                            //         }
+                            //     }
+                            // }
+                        }
+                    }
                 ])
             }
         ]
