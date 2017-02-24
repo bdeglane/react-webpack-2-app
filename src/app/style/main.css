@@ -32,6 +32,10 @@ html, body * {
     color: var(--primary-color);
 }
 
+.primaryBgColor {
+    background: var(--primary-color);
+}
+
 .big {
     font-size: 2rem;
 }
