@@ -1,6 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const precess = require('precss');
+const cssimport = require('postcss-import');
+const cssnext = require('postcss-cssnext');
 
 const isProd = process.env.NODE_ENV === 'production';
 const isDev = process.env.NODE_ENV === 'development';
@@ -44,14 +47,14 @@ module.exports = {
                     {
                         loader: 'postcss-loader',
                         options: {
-                            // plugins: function () {
-                            //     return {
-                            //         'postcss-import': {},
-                            //         'postcss-cssnext': {
-                            //             browsers: ['last 2 versions', '> 5%'],
-                            //         }
-                            //     }
-                            // }
+                            plugins: function () {
+                                return [
+                                    cssimport(),
+                                    cssnext({
+                                        browsers: ['last 2 versions', '> 5%']
+                                    })
+                                ]
+                            }
                         }
                     }
                 ])
