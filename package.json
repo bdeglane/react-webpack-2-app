@@ -1,6 +1,6 @@
 {
-  "name": "article",
-  "description": "",
+  "name": "react-webpack-2-app",
+  "description": "Example",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
