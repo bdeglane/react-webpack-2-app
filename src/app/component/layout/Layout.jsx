@@ -2,10 +2,13 @@ import React, {Component, PropTypes} from 'react'
 import cx from 'classnames';
 import Header from '../header/Header.jsx';
 
-import grid from '../../style/component/grid.css';
-
 export default class Layout extends Component {
+    constructor(props, context) {
+        super(props, context);
+    }
+
     render() {
+        const {grid} = this.context;
         return (
             <div className={grid.frame}>
                 <div className={cx(grid.vertical, grid.block)}>
@@ -20,3 +23,7 @@ export default class Layout extends Component {
         )
     }
 }
+
+Layout.contextTypes = {
+    grid: PropTypes.object
+};
