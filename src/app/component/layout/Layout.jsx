@@ -5,6 +5,7 @@ import Header from '../header/Header.jsx';
 export default class Layout extends Component {
     constructor(props, context) {
         super(props, context);
+        this.grid = context.grid;
     }
 
     render() {
