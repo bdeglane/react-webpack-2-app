@@ -1,8 +1,33 @@
+/*:root {*/
+/*--secondary-color: ;*/
+/*}*/
+
 .header {
     composes: primaryBgColor from '../../style/main.css';
-    height: 4rem;
+    height: 2rem;
+    line-height: 3rem;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 }
 
-.menu {
+.header a:hover {
+    color: white;
+    /*composes: secondaryBgColor from '../../style/main.css';*/
+}
 
+.menuLink {
+    color: white;
+    padding: 0 1rem;
+}
+
+.menuLink:hover {
+    background: var(--secondary-color);
+}
+
+.brand {
+    color: white;
+    padding: 0 0.5rem;
+}
+
+.brand:hover {
+    background: none;
 }
