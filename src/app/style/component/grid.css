@@ -52,3 +52,23 @@
     flex-flow: column nowrap;
     align-items: stretch;
 }
+
+.alignRight.frame,
+.alignRight.block {
+    justify-content: flex-end;
+}
+
+.alignCenter.frame,
+.alignCenter.block {
+    justify-content: center;
+}
+
+.alignJustify.frame,
+.alignJustify.block {
+    justify-content: space-between;
+}
+
+.alignSpaced.frame,
+.alignSpaced.block {
+    justify-content: space-around;
+}
