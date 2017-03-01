@@ -13,9 +13,7 @@ export default class Layout extends Component {
         return (
             <div className={grid.frame}>
                 <div className={cx(grid.vertical, grid.block)}>
-                    <div className={cx(grid.shrink, grid.block)}>
-                        <Header/>
-                    </div>
+                    <Header/>
                     <div className={grid.block}>
                         {this.props.children}
                     </div>
